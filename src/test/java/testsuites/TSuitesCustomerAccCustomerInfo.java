@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-                features = "src\\test\\java\\features\\login.feature",
+                features = "src\\test\\java\\features\\customerAccountCustomerInfo.feature",
                 glue ={"stepsDef"},
                 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
-public class TSuites001 {
+public class TSuitesCustomerAccCustomerInfo {
 
 }

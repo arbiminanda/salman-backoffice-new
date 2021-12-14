@@ -1,6 +1,8 @@
+@All
 Feature: customerAccountPassedCustomerNegative Feature
   Doing a review of one account with empty comment
   
+  @TS01
   Scenario: Doing a review of one account with empty comment
     Given user is on homepage
     When user navigates to Login Page
@@ -9,3 +11,6 @@ Feature: customerAccountPassedCustomerNegative Feature
     When user choose one of account and click Review
     When user click Review button
     Then user fail to Review
+    
+    
+    

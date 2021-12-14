@@ -41,8 +41,11 @@ public class customerAccountConnectToMambu extends env_target {
 
     @Then("^user success Retry$")
     public void user_success_Retry() throws Throwable{
-    	Thread.sleep(5000);
-    	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    	WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='mb-2 Toast_notificationMessage__1Rf1w']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\retryConnectToMambu.png"));
     	driver.close();
     }
@@ -60,8 +63,8 @@ public class customerAccountConnectToMambu extends env_target {
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ConnectedToMambuList.png"));
     }
     
-    @When("^user trying to filter All$")
-    public void user_trying_to_filter_All() throws Throwable {
+    @When("^user trying to filter All Mambu Status$")
+    public void user_trying_to_filter_All_Mambu_Status() throws Throwable {
         driver.findElement(By.xpath("//div[contains(text(),\"Connected\")]")).click();
         Thread.sleep(1000);
         driver.findElement(By.id("react-select-true-option-2")).click();

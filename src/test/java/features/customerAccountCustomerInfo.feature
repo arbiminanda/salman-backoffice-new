@@ -27,7 +27,7 @@ Feature: customerAccountCostumerInfo Feature
     When user fill all customer information
     When user click button detail
 		When user trying to filter transaction record feature
-    When user fill some infomation on feature number
+    When user fill some infomation on filter feature
     Then user success filtering transaction record
   
   @TS03  
@@ -70,4 +70,4 @@ Feature: customerAccountCostumerInfo Feature
 		When user click download transaction log button
     When user choose format file
     When user click Download button
-    Then user see all data on chosen box account    
+    Then user success download log    

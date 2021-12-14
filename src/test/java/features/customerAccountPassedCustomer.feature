@@ -11,7 +11,8 @@ Feature: customerAccountPassedCustomer Feature
     When user enters username and Password
     When user navigates to Passed Customer Page
     When user choose one of account and click Review
-    When user enter comment and click Review button
+    When user enter comment 
+    When user click Review button
     Then user success Review
   
   @TS02  
@@ -21,7 +22,7 @@ Feature: customerAccountPassedCustomer Feature
     When user enters username and Password
     When user navigates to Passed Customer Page
     When user trying to filtering Reviewed
-    When user trying to filter All
-    And user search one account
+    When user trying to filter All Passed Customer
+    When user search one account in Passed Customer
     
     

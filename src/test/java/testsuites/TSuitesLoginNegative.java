@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
         glue ={"stepsDef"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
-public class TSuitesNegative001 {
+public class TSuitesLoginNegative {
 
 }
