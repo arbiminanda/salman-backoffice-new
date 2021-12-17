@@ -44,20 +44,6 @@ public class customerAccountVerifications extends env_target {
         ));
     }
     
-    @When("^user search one account in done otp auth$")
-    public void user_search_one_account_in_done_otp_auth() throws Throwable {
-        driver.findElement(By.xpath("//input[@placeholder='Search here..']")).sendKeys("selfieaja");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
-        ));
-        wait.until(ExpectedConditions.or(
-        	ExpectedConditions.visibilityOfElementLocated(By.id("column-username"))
-        ));
-        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\SearchDoneOTPAuth.png"));
-	}
-    
     @When("^user show unverified list$")
     public void user_show_unverified_list() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'unverified')]")).click();
@@ -92,7 +78,7 @@ public class customerAccountVerifications extends env_target {
     }
     
     @When("^user search one account in verifications$")
-    public void user_search_one_account_in_waiting_otp_auth() throws Throwable {
+    public void user_search_one_account_in_verifications() throws Throwable {
         driver.findElement(By.xpath("//input[@placeholder='Search here..']")).sendKeys("Hijra");
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.or(

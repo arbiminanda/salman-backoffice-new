@@ -55,6 +55,6 @@ Feature: customerAccountEKYCResult feature
     When user click img filter button
     When user fill start date for ekyc filter
     When user fill end date for ekyc filter
-    When user clik proceed button in filter
+    When user click proceed button in filter
     Then user see filter result
     When user search one account in ekyc result

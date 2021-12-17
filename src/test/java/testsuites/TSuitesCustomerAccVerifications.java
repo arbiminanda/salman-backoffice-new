@@ -9,8 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
                 features = "src\\test\\java\\features\\customerAccountVerifications.feature",
                 glue ={"stepsDef"},
-                plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-                tags = {"@All"})
+                plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class TSuitesCustomerAccVerifications {
 

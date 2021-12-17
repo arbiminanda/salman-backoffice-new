@@ -64,13 +64,14 @@ public class customerAccountOTPAuth extends env_target {
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\SearchDoneOTPAuth.png"));
-	}
+        driver.close();
+    }
     
     @When("^user show waiting otp auth$")
     public void user_show_waiting_otp_auth() throws Throwable {
-        driver.findElement(By.xpath("//div[contains(text(),'Waiting')]")).click();
-        Thread.sleep(1000);
         driver.findElement(By.xpath("//div[contains(text(),'Done')]")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//div[contains(text(),'Waiting')]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
@@ -96,7 +97,7 @@ public class customerAccountOTPAuth extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.className("mb-2 Toast_notificationMessage__1Rf1w"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='mb-2 Toast_notificationMessage__1Rf1w']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\GenerateOTP.png"));
