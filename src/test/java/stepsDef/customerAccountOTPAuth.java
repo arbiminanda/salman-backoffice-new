@@ -114,6 +114,7 @@ public class customerAccountOTPAuth extends env_target {
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\SearchWaitingOTPAuth.png"));
+        driver.close();
 	}
 
 }

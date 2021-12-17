@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
                 features = "src\\test\\java\\features\\customerAccountConnectToMambu.feature",
-                glue ={"stepsDef"},
+                glue = "stepsDef",
                 plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
                 tags = {"@All"})
 

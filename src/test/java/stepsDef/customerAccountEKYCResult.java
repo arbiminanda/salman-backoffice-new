@@ -22,10 +22,10 @@ import java.util.concurrent.TimeUnit;
 
 public class customerAccountEKYCResult extends env_target {
 	
-		@When("^user click ekyc result$")
+	@When("^user click ekyc result$")
     public void user_click_verifications() throws Throwable {
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//span[contains(text(),'EKYC Result')]")).click();
+        driver.findElement(By.xpath("//span[contains(text(),'e-KYC Result')]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
@@ -78,6 +78,7 @@ public class customerAccountEKYCResult extends env_target {
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ForceDeleteEKYCList.png"));
+        driver.close();
     }
 	
 	@When("^user show rejected ekyc result$")
@@ -90,7 +91,7 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\RejectedEKYCList.png"));
@@ -98,7 +99,7 @@ public class customerAccountEKYCResult extends env_target {
 	
 	@When("^user show pending ekyc result$")
     public void user_show_pending_ekyc_result() throws Throwable {
-		driver.findElement(By.xpath("//div[contains(text(),'Rejected')]")).click();
+		driver.findElement(By.xpath("//div[contains(text(),'Approved')]")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[contains(text(),'Pending')]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -106,7 +107,7 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\PendingEKYCList.png"));
@@ -114,7 +115,7 @@ public class customerAccountEKYCResult extends env_target {
 	
 	@When("^user show waiting ekyc result$")
     public void user_show_waiting_ekyc_result() throws Throwable {
-		driver.findElement(By.xpath("//div[contains(text(),'Pending')]")).click();
+		driver.findElement(By.xpath("//div[contains(text(),'Approved')]")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//div[contains(text(),'Waiting')]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -122,7 +123,7 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\WaitingEKYCList.png"));
@@ -138,7 +139,7 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\AllEKYCList.png"));
@@ -146,7 +147,7 @@ public class customerAccountEKYCResult extends env_target {
 	
     @When("^user click decide button$")
     public void user_click_decide_button() throws Throwable {
-        driver.findElement(By.linkText("Decide")).click();
+        driver.findElement(By.xpath("//a[contains(text(),'Decide')]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'EKYC Result')]"))
@@ -167,9 +168,9 @@ public class customerAccountEKYCResult extends env_target {
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\CheckKTP.png"));
     }
     
-    @When("^user check selfiephoto$")
+    @When("^user check selfie photo$")
     public void user_check_selfie_photo() throws Throwable {
-        driver.findElement(By.xpath("//button[contains(text(),'Selfie')]")).click();
+        driver.findElement(By.xpath("//button[@id='headlessui-tabs-tab-46']")).click();
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\CheckSelfie.png"));
     }
@@ -178,7 +179,7 @@ public class customerAccountEKYCResult extends env_target {
     public void user_check_signature_photo() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Signature')]")).click();
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\Signature.png"));
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\CheckSignature.png"));
     }
     
     @When("^user fill ekyc analysis$")
@@ -194,6 +195,10 @@ public class customerAccountEKYCResult extends env_target {
     @When("^user click reject button$")
     public void user_click_reject_button() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Reject')]")).click();
+    }
+    
+    @Then("^user see reject result$")
+    public void user_see_reject_result() throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
@@ -201,31 +206,35 @@ public class customerAccountEKYCResult extends env_target {
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.className("mb-2 Toast_notificationMessage__1Rf1w"))
         ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\RejectEKYCResult.png"));
+        if (driver.findElements(By.xpath("//div[contains(text(),'EKYC Result')]")).size() != 0) {
+    		driver.findElement(By.xpath("//button[@class='font-bold flex items-center mt-8 focus:outline-none']")).click();
+    	}
     }
     
     @When("^user click approve button$")
     public void user_click_approve_button() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Approve')]")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+    }
+    
+    @Then("^user see approve result$")
+    public void user_see_approve_result() throws Throwable {
+    	WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
             ExpectedConditions.visibilityOfElementLocated(By.className("mb-2 Toast_notificationMessage__1Rf1w"))
         ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ApproveEKYCResult.png"));
+        driver.close();
     }
     
     @When("^user click propose change data button$")
     public void user_click_propose_change_data_button() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Propose to change data')]")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
-        ));
-        wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'OK')]"))
-        ));
-        driver.findElement(By.xpath("//span[contains(text(),'OK')]")).click();
     }
     
     @When("^user click force delete button$")
@@ -248,12 +257,14 @@ public class customerAccountEKYCResult extends env_target {
       
     @When("^user fill start date for ekyc filter$")
     public void user_fill_start_date_for_ekyc_filter() throws Throwable {
-    	driver.findElement(By.id("startDate")).sendKeys("1 October 2021");
+    	driver.findElement(By.xpath("//input[@id='dateFrom']")).sendKeys("1 October 2021");
     }
     
     @When("^user fill end date for ekyc filter$")
     public void user_fill_end_date_for_ekyc_filter() throws Throwable {
-    	driver.findElement(By.id("endDate")).sendKeys("1 December 2021");
+    	driver.findElement(By.xpath("//input[@id='dateTo']")).sendKeys("1 December 2021");
+    	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\FilterEKYCResult.png"));
     }
     
     @When("^user click proceed button in filter$")
@@ -268,7 +279,7 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-            ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
     }
     
@@ -280,10 +291,11 @@ public class customerAccountEKYCResult extends env_target {
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
         ));
         wait.until(ExpectedConditions.or(
-        	ExpectedConditions.visibilityOfElementLocated(By.id("column-name"))
+        	ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
         ));
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\SearchEKYCResult.png"));
-	}
+        driver.close();
+    }
     
 }

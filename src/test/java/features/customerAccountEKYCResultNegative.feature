@@ -9,12 +9,11 @@ Feature: customerAccountEKYCstatusNegative feature
     When user navigates to Login Page
     When user enters username and Password
     When user click menu customer account
-    When user click e-kyc result
-    When user show filter pending e-kyc result
+    When user click ekyc result
+    When user show pending ekyc result
     When user click decide button
     When user click reject button
-    Then user see analysis error message
-    Then user see recommendation error message
+    Then user see analysis and recommendation error message
     When user fill ekyc analysis
     When user click propose change data button
     Then user see recommendation error message

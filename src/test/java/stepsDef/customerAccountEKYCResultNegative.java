@@ -22,8 +22,6 @@ import java.util.concurrent.TimeUnit;
 
 public class customerAccountEKYCResultNegative extends env_target {
 	
-	public String newPhone = "6281348206549"; 
-
 	@When("^user empty ekyc analysis$")
     public void user_empty_ekyc_analysis() throws Throwable {
         driver.findElement(By.xpath("//textarea[@name='ekycAnalysis']")).clear();
@@ -32,11 +30,23 @@ public class customerAccountEKYCResultNegative extends env_target {
     @Then("^user see analysis error message$")
     public void user_see_analysis_error_message() throws Throwable{
     	driver.findElement(By.xpath("//span[contains(text(),'Analisis wajib diisi')]"));
+    	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ErrorMsgAnalysisEKYCResult.png"));
     }
     
     @Then("^user see recommendation error message$")
     public void user_see_recommendation_error_message() throws Throwable{
     	driver.findElement(By.xpath("//span[contains(text(),'Rekomendasi wajib diisi')]"));
+    	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ErrorMsgRecomEKYCResult.png"));
+    }
+    
+    @Then("^user see analysis and recommendation error message$")
+    public void user_see_analysis_and_recommendation_error_message() throws Throwable{
+    	driver.findElement(By.xpath("//span[contains(text(),'Analisis wajib diisi')]"));
+    	driver.findElement(By.xpath("//span[contains(text(),'Rekomendasi wajib diisi')]"));
+    	File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ErrorMsgAnalysisRecomEKYCResult.png"));
     }
     
 }
