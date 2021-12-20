@@ -20,12 +20,6 @@ import java.util.concurrent.TimeUnit;
 
 public class customerAccountOTPAuth extends env_target {
 
-	@When("^user click menu customer account$")
-    public void user_click_menu_customer_account() throws Throwable {
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//span[contains(text(),'Customer Account')]")).click();
-    }
-	
 	@When("^user click otp auth$")
     public void user_click_otp_auth() throws Throwable {
         Thread.sleep(1000);

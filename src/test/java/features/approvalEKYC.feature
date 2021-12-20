@@ -1,8 +1,8 @@
 @All
-Feature: customerAccountEKYCResult feature
-  Show approved, submitted and force delete list
-  Show pending, rejected & waiting list and decide spesific customer
-  Show all list, use filter feature and search keyword
+Feature: approvalEKYC feature
+  Show approved, pending, waiting, rejected, and force delete
+  Use search keyword filter
+  Decide submitted approval
 
 	@TS01
   Scenario: Show approved, pending, waiting, rejected, and force delete

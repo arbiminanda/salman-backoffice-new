@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src\\test\\java\\features\\loginnegative.feature",
+        features = "src\\test\\java\\features\\loginNegative.feature",
         glue ={"stepsDef"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
