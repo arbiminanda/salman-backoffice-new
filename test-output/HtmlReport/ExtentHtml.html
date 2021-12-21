@@ -36,7 +36,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -46,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 20, 2021 04:45:31 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 21, 2021 03:49:51 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -62,8 +61,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -77,6 +74,7 @@
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@All</a></li>
 					<li><a href='#'>@TS01</a></li>
+					<li><a href='#'>@TS02</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -117,10 +115,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -131,10 +129,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -145,10 +143,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='39.13%'><span class='strong'>9</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>22</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='4.348%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='56.522%'>13</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -166,11 +164,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>approvalDeleteAccountNegative feature</span>
-						<span class='test-time'>Dec 20, 2021 04:45:31 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>approvalDeleteAccount feature</span>
+						<span class='test-time'>Dec 21, 2021 03:49:52 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -179,14 +177,14 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
     <div class='category-list'>
         <span class='category label'>@All</span>
         <span class='category label'>@TS01</span>
     </div>
-    <span class='duration right label'>0h 0m 31s+720ms</span>
+    <span class='duration right label'>0h 0m 30s+29ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Decide pending approval delete with null</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Search in deleted and pending approval delete</div>
     </div>
     <ul class='steps'>
         <li test-id='3' class='node given pass' status='pass'>
@@ -210,98 +208,84 @@
                 <div class="node-step"></div>
         </li>
         <li test-id='8' class='node when pass' status='pass'>
-            <div class="step-name" title="approval.user_show_pending_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user show pending approval</div>
+            <div class="step-name" title="approval.user_show_deleted_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user show deleted approval</div>
                 <div class="node-step"></div>
         </li>
-        <li test-id='9' class='node when pass' status='pass'>
-            <div class="step-name" title="approvalDeleteAccount.user_click_decide_approval_delete_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click decide approval delete button</div>
+        <li test-id='9' class='node then pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_see_deleted_approval_delete()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user see deleted approval delete</div>
                 <div class="node-step"></div>
         </li>
         <li test-id='10' class='node when pass' status='pass'>
-            <div class="step-name" title="approval.user_fill_supervisor_comment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user fill supervisor comment</div>
+            <div class="step-name" title="approvalDeleteAccount.user_search_one_account_in_deleted_approval_delete()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user search one account in deleted approval delete</div>
                 <div class="node-step"></div>
         </li>
         <li test-id='11' class='node when pass' status='pass'>
-            <div class="step-name" title="approval.user_empty_supervisor_comment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user empty supervisor comment</div>
+            <div class="step-name" title="approval.user_empty_search_keyword_field()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user empty search keyword field</div>
                 <div class="node-step"></div>
         </li>
-        <li test-id='12' class='node when fail' status='fail'>
-            <div class="step-name" title="approvalDeleteAccount.user_click_confirm_delete_approval()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When user click confirm delete approval</div>
-                <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="rounded shadow px-4 py-2 bg-alami-green text-white w-44">...</button> is not clickable at point (1189, 571). Other element would receive the click: <p class="mb-2 Toast_notificationMessage__1Rf1w">...</p>
-  (Session info: chrome=96.0.4664.110)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\arbim\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55936}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c879f8aa773e31148bc4f97e6a36b885
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepsDef.approvalDeleteAccount.user_click_confirm_delete_approval(approvalDeleteAccount.java:85)
-	at ✽.user click confirm delete approval(file:src/test/java/features/approvalDeleteAccountNegative.feature:15)
-</textarea>
+        <li test-id='12' class='node when pass' status='pass'>
+            <div class="step-name" title="approval.user_show_pending_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user show pending approval</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='13' class='node then skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_see_three_error_message()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user see three error messages</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='13' class='node then pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_see_pending_approval_delete()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user see pending approval delete</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='14' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_fill_money_out_time()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user fill money out time</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='14' class='node when pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_search_one_account_in_pending_approval_delete()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user search one account in pending approval delete</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='15' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_fill_finance_email()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user fill finance email</div>
-                <div class="node-step">Step skipped</div>
+    </ul>
+</div>
+<div class='scenario node' test-id='15' status='pass'>
+    <div class='category-list'>
+        <span class='category label'>@All</span>
+        <span class='category label'>@TS02</span>
+    </div>
+    <span class='duration right label'>0h 0m 19s+732ms</span>
+    <div class="bdd-test">
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Decide pending approval delete</div>
+    </div>
+    <ul class='steps'>
+        <li test-id='16' class='node given pass' status='pass'>
+            <div class="step-name" title="LoginTest.user_is_on_homepage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on homepage</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='16' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_click_confirm_delete_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click confirm delete approval</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='17' class='node when pass' status='pass'>
+            <div class="step-name" title="LoginTest.user_navigates_to_Login_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user navigates to Login Page</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='17' class='node then skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_see_supervisor_comment_error_message_delete()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user see supervisor comment error message delete</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='18' class='node when pass' status='pass'>
+            <div class="step-name" title="LoginTest.user_enters_username_and_Password()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters username and Password</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='18' class='node when skip' status='skip'>
-            <div class="step-name" title="approval.user_fill_supervisor_comment()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user fill supervisor comment</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='19' class='node when pass' status='pass'>
+            <div class="step-name" title="approval.user_click_menu_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click menu approval</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='19' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_empty_finance_email()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user empty finance email</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='20' class='node when pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_click_delete_account()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click delete account</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='20' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_click_confirm_delete_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click confirm delete approval</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='21' class='node when pass' status='pass'>
+            <div class="step-name" title="approval.user_show_pending_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user show pending approval</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='21' class='node then skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_see_finance_email_error_message()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user see finance email error message</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='22' class='node when pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_click_decide_approval_delete_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click decide approval delete button</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='22' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_empty_money_out_time()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user empty money out time</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='23' class='node when pass' status='pass'>
+            <div class="step-name" title="approval.user_fill_supervisor_comment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user fill supervisor comment</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='23' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_fill_finance_email()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user fill finance email</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='24' class='node when pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_fill_finance_email()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user fill finance email</div>
+                <div class="node-step"></div>
         </li>
-        <li test-id='24' class='node when skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccount.user_click_confirm_delete_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click confirm delete approval</div>
-                <div class="node-step">Step skipped</div>
-        </li>
-        <li test-id='25' class='node then skip' status='skip'>
-            <div class="step-name" title="approvalDeleteAccountNegative.user_see_money_out_time_error_message()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user see money out time error message</div>
-                <div class="node-step">Step skipped</div>
+        <li test-id='25' class='node when pass' status='pass'>
+            <div class="step-name" title="approvalDeleteAccount.user_fill_money_out_time()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user fill money out time</div>
+                <div class="node-step"></div>
         </li>
     </ul>
 </div>
@@ -349,13 +333,13 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 					<div class='category-heading'>
 						<span class='category-name'>@All</span>
 						<span class='category-status right'>
-						<span class='label fail'>2</span>
+						<span class='label pass'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -369,14 +353,19 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 20, 2021 04:45:31 PM</td>
-										<td class='linked' test-id='1'>approvalDeleteAccountNegative feature</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 21, 2021 03:49:52 PM</td>
+										<td class='linked' test-id='1'>approvalDeleteAccount feature</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 20, 2021 04:45:31 PM</td>
-										<td class='linked' test-id='2'>approvalDeleteAccountNegative feature.Decide pending approval delete with null</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 21, 2021 03:49:52 PM</td>
+										<td class='linked' test-id='2'>approvalDeleteAccount feature.Search in deleted and pending approval delete</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 21, 2021 03:50:22 PM</td>
+										<td class='linked' test-id='15'>approvalDeleteAccount feature.Decide pending approval delete</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -387,13 +376,13 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 					<div class='category-heading'>
 						<span class='category-name'>@TS01</span>
 						<span class='category-status right'>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -407,9 +396,42 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 20, 2021 04:45:31 PM</td>
-										<td class='linked' test-id='2'>approvalDeleteAccountNegative feature.Decide pending approval delete with null</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Dec 21, 2021 03:49:52 PM</td>
+										<td class='linked' test-id='2'>approvalDeleteAccount feature.Search in deleted and pending approval delete</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TS02</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 21, 2021 03:50:22 PM</td>
+										<td class='linked' test-id='15'>approvalDeleteAccount feature.Decide pending approval delete</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -425,84 +447,7 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 20, 2021 04:46:01 PM</td>
-										<td class='linked' test-id='12'>approvalDeleteAccountNegative feature.Decide pending approval delete with null.When user click confirm delete approval</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="rounded shadow px-4 py-2 bg-alami-green text-white w-44">...</button> is not clickable at point (1189, 571). Other element would receive the click: <p class="mb-2 Toast_notificationMessage__1Rf1w">...</p>
-  (Session info: chrome=96.0.4664.110)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.120', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\arbim\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55936}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c879f8aa773e31148bc4f97e6a36b885
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at stepsDef.approvalDeleteAccount.user_click_confirm_delete_approval(approvalDeleteAccount.java:85)
-	at ✽.user click confirm delete approval(file:src/test/java/features/approvalDeleteAccountNegative.feature:15)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -516,31 +461,31 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>23</div>
+					<div class='panel-lead'>22</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 20, 2021 04:45:31 PM</div>
+					<div class='panel-lead'>Dec 21, 2021 03:49:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 20, 2021 04:46:03 PM</div>
+			 		<div class='panel-lead'>Dec 21, 2021 03:50:42 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 32s+323ms</div>
+					<div class='panel-lead'>0h 0m 50s+256ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -557,20 +502,29 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 						</tr>
 						<tr>
 							<td>@All</td>
+							<td>3</td>
 							<td>0</td>
-							<td>2</td>
 							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
 							<td>@TS01</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TS02</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
 							</td>
 						</tr>
 					</table>
@@ -585,38 +539,38 @@ Session ID: c879f8aa773e31148bc4f97e6a36b885
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
-				childCount: 1,
-				passChild: 0,
-				failChild: 1,
+				exceptionsParent: 0,
+				childCount: 2,
+				passChild: 2,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 23,
-				passGrandChild: 9,
-				failGrandChild: 1,
+				exceptionsChild: 0,
+				grandChildCount: 22,
+				passGrandChild: 22,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 13,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 14,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "approvalDeleteAccountNegative feature":31.72
+			        "approvalDeleteAccount feature":49.766
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

@@ -9,11 +9,9 @@ Feature: approvalDeleteAccount feature
     When user click menu approval
     When user click delete account
     When user show deleted approval
-    Then user see deleted approval delete
     When user search one account in deleted approval delete
     When user empty search keyword field
     When user show pending approval
-    Then user see pending approval delete
     When user search one account in pending approval delete 
     
   @TS02

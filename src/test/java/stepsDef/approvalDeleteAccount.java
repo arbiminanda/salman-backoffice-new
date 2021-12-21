@@ -22,6 +22,32 @@ import java.util.concurrent.TimeUnit;
 
 public class approvalDeleteAccount extends env_target {
 	
+	@Then("^user see deleted approval delete$")
+    public void user_see_deleted_approval_delete() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\DeletedApprovalDeleteList.png"));
+    }
+	
+	@Then("^user see pending approval delete$")
+    public void user_see_pending_approval_delete() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\PendingApprovalDeleteList.png"));
+    }
+	
 	@When("^user click delete account$")
     public void user_click_delete_account() throws Throwable {
         Thread.sleep(1000);
@@ -83,7 +109,7 @@ public class approvalDeleteAccount extends env_target {
 	@When("^user click confirm delete approval$")
     public void user_click_confirm_delete_approval() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Confirm Delete')]")).click();
-    }
+	}
 	
 	@When("^user click reject delete approval$")
     public void user_click_reject_delete_approval() throws Throwable {

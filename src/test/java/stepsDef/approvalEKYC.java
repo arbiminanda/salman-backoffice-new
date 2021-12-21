@@ -32,6 +32,98 @@ public class approvalEKYC extends env_target {
         ));
     }
 	
+	@Then("^user see waiting approval ekyc$")
+    public void user_see_waiting_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\WaitingApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see approved approval ekyc$")
+    public void user_see_approved_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\ApproveApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see pending approval ekyc$")
+    public void user_see_pending_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\PendingApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see rejected approval ekyc$")
+    public void user_see_rejected_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\RejectedApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see all approval ekyc$")
+    public void user_see_all_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\AllApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see submitted approval ekyc$")
+    public void user_see_submitted_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\RejectedApprovalEKYCList.png"));
+    }
+	
+	@Then("^user see force delete approval ekyc$")
+    public void user_see_force_delete_approval_ekyc() throws Throwable {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Loading')]"))
+        ));
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='table']"))
+        ));
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File(projectPath+ "\\src\\test\\java\\screenshots\\WaitingApprovalEKYCList.png"));
+        driver.close();
+    }
+	
 	@When("^user search one account in approval ekyc$")
     public void user_search_one_account_in_approval_ekyc() throws Throwable {
         driver.findElement(By.xpath("//input[@placeholder='Search here..']")).sendKeys("test tengah mambu");
