@@ -28,3 +28,5 @@ Feature: approvalDeleteAccount feature
     When user fill supervisor comment
     When user fill finance email
     When user fill money out time
+    When user click confirm delete approval
+    Then user see approval delete result

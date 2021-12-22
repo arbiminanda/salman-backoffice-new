@@ -68,6 +68,16 @@ public class approval extends env_target {
         driver.findElement(By.xpath("//button[contains(text(),'Deleted')]")).click();
     }
 	
+	@When("^user show active approval$")
+    public void user_active_deleted_approval() throws Throwable {
+        driver.findElement(By.xpath("//button[contains(text(),'Active')]")).click();
+    }
+	
+	@When("^user show inactive approval$")
+    public void user_inactive_deleted_approval() throws Throwable {
+        driver.findElement(By.xpath("//button[contains(text(),'Inactive')]")).click();
+    }
+	
 	@When("^user empty search keyword field$")
     public void user_empty_search_keyword_field() throws Throwable {
         driver.findElement(By.xpath("//input[@placeholder='Search here..']")).clear();
