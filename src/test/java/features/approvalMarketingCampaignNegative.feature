@@ -10,6 +10,8 @@ Feature: approvalMarketingCampaignNegative feature
     When user click marketing campaign
     When user show pending approval
     When user click decide approval marketing campaign button
+    When user upload invalid marketing campaign file
+    Then user see invalid marketing campaign file error message
     When user click approve approval marketing campaign
     Then user see supervisor comment error message approval marketing campaign
     When user clear marketing campaign file
