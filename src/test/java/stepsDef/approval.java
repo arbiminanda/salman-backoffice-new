@@ -38,6 +38,11 @@ public class approval extends env_target {
         driver.findElement(By.xpath("//button[contains(text(),'Pending')]")).click();
     }
 	
+	@When("^user show completed approval$")
+    public void user_show_completed_approval() throws Throwable {
+        driver.findElement(By.xpath("//button[contains(text(),'Completed')]")).click();
+    }
+	
 	@When("^user show waiting approval$")
     public void user_show_waiting_approval() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Waiting')]")).click();
@@ -76,6 +81,16 @@ public class approval extends env_target {
 	@When("^user show inactive approval$")
     public void user_inactive_deleted_approval() throws Throwable {
         driver.findElement(By.xpath("//button[contains(text(),'Inactive')]")).click();
+    }
+	
+	@When("^user click ok$")
+    public void user_click_ok() throws Throwable {
+        driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
+    }
+	
+	@When("^user click cancel$")
+    public void user_click_cancel() throws Throwable {
+        driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")).click();
     }
 	
 	@When("^user empty search keyword field$")
