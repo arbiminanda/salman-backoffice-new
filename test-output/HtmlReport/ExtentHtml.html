@@ -46,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 30, 2021 03:54:16 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 31, 2021 05:32:21 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -146,10 +146,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>8</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='12.5%'><span class='strong'>3</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='58.333%'>14</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='79.167%'>19</span> others
                 </div>
             </div>
         </div>
@@ -170,7 +170,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>approvalBusinessCampaign feature</span>
-						<span class='test-time'>Dec 30, 2021 03:54:16 PM</span>
+						<span class='test-time'>Dec 31, 2021 05:32:22 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -185,7 +185,7 @@
         <span class='category label'>@All</span>
         <span class='category label'>@TS01</span>
     </div>
-    <span class='duration right label'>0h 0m 40s+360ms</span>
+    <span class='duration right label'>0h 0m 18s+616ms</span>
     <div class="bdd-test">
         <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Show approval marketing campaign and search account</div>
     </div>
@@ -202,23 +202,24 @@
             <div class="step-name" title="LoginTest.user_enters_username_and_Password()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters username and Password</div>
                 <div class="node-step"></div>
         </li>
-        <li test-id='6' class='node when pass' status='pass'>
-            <div class="step-name" title="approval.user_click_menu_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click menu approval</div>
-                <div class="node-step"></div>
-        </li>
-        <li test-id='7' class='node when fail' status='fail'>
-            <div class="step-name" title="approvalBusinessCampaign.user_click_business_campaign()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When user click business campaign</div>
-                <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.xpath: //div[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+        <li test-id='6' class='node when fail' status='fail'>
+            <div class="step-name" title="approval.user_click_menu_approval()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When user click menu approval</div>
+                <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//span[contains(text(),'Approval')]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MSI', ip: '192.168.203.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\IMAMSE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64750}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bf1dfc41634b8dc01bd2b8fbd73f1f73
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at stepsDef.approvalBusinessCampaign.user_click_business_campaign(approvalBusinessCampaign.java:30)
-	at ✽.user click business campaign(file:src/test/java/features/approvalBusinessCampaign.feature:10)
+System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepsDef.approval.user_click_menu_approval(approval.java:28)
+	at ✽.user click menu approval(file:src/test/java/features/approvalBusinessCampaign.feature:9)
 </textarea>
+        </li>
+        <li test-id='7' class='node when skip' status='skip'>
+            <div class="step-name" title="approvalBusinessCampaign.user_click_business_campaign()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click business campaign</div>
+                <div class="node-step">Step skipped</div>
         </li>
         <li test-id='8' class='node when skip' status='skip'>
             <div class="step-name" title="approval.user_active_deleted_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user show active approval</div>
@@ -263,40 +264,106 @@ Session ID: bf1dfc41634b8dc01bd2b8fbd73f1f73
         <span class='category label'>@All</span>
         <span class='category label'>@TS02</span>
     </div>
-    <span class='duration right label'>0h 0m 37s+866ms</span>
+    <span class='duration right label'>0h 0m 5s+566ms</span>
     <div class="bdd-test">
         <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Decide pending approval business campaign</div>
     </div>
     <ul class='steps'>
-        <li test-id='18' class='node given pass' status='pass'>
-            <div class="step-name" title="LoginTest.user_is_on_homepage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on homepage</div>
-                <div class="node-step"></div>
-        </li>
-        <li test-id='19' class='node when pass' status='pass'>
-            <div class="step-name" title="LoginTest.user_navigates_to_Login_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user navigates to Login Page</div>
-                <div class="node-step"></div>
-        </li>
-        <li test-id='20' class='node when pass' status='pass'>
-            <div class="step-name" title="LoginTest.user_enters_username_and_Password()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters username and Password</div>
-                <div class="node-step"></div>
-        </li>
-        <li test-id='21' class='node when pass' status='pass'>
-            <div class="step-name" title="approval.user_click_menu_approval()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click menu approval</div>
-                <div class="node-step"></div>
-        </li>
-        <li test-id='22' class='node when fail' status='fail'>
-            <div class="step-name" title="approvalBusinessCampaign.user_click_business_campaign()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When user click business campaign</div>
-                <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.xpath: //div[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+        <li test-id='18' class='node given fail' status='fail'>
+            <div class="step-name" title="LoginTest.user_is_on_homepage()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given user is on homepage</div>
+                <textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=96.0.4664.110)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MSI', ip: '192.168.203.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\IMAMSE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64835}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 529023908c7d25390f612a851102bb4f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at stepsDef.approvalBusinessCampaign.user_click_business_campaign(approvalBusinessCampaign.java:30)
-	at ✽.user click business campaign(file:src/test/java/features/approvalBusinessCampaign.feature:27)
+System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00EC6903+2517251]
+	Ordinal0 [0x00E5F8E1+2095329]
+	Ordinal0 [0x00D62848+1058888]
+	Ordinal0 [0x00D54FBF+1003455]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D5A82D+1026093]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D549F6+1001974]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D59ABC+1022652]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D549F6+1001974]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D4F6ED+980717]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D53890+997520]
+	Ordinal0 [0x00D53629+996905]
+	Ordinal0 [0x00D63A60+1063520]
+	Ordinal0 [0x00DABA7A+1358458]
+	Ordinal0 [0x00DAA71A+1353498]
+	Ordinal0 [0x00DA639B+1336219]
+	Ordinal0 [0x00D827A7+1189799]
+	Ordinal0 [0x00D83609+1193481]
+	GetHandleVerifier [0x01055904+1577972]
+	GetHandleVerifier [0x01100B97+2279047]
+	GetHandleVerifier [0x00F56D09+534521]
+	GetHandleVerifier [0x00F55DB9+530601]
+	Ordinal0 [0x00E64FF9+2117625]
+	Ordinal0 [0x00E698A8+2136232]
+	Ordinal0 [0x00E699E2+2136546]
+	Ordinal0 [0x00E73541+2176321]
+	BaseThreadInitThunk [0x76A2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77297A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297A6E+238]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+	at stepsDef.LoginTest.user_is_on_homepage(LoginTest.java:30)
+	at ✽.user is on homepage(file:src/test/java/features/approvalBusinessCampaign.feature:23)
 </textarea>
+        </li>
+        <li test-id='19' class='node when skip' status='skip'>
+            <div class="step-name" title="LoginTest.user_navigates_to_Login_Page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user navigates to Login Page</div>
+                <div class="node-step">Step skipped</div>
+        </li>
+        <li test-id='20' class='node when skip' status='skip'>
+            <div class="step-name" title="LoginTest.user_enters_username_and_Password()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user enters username and Password</div>
+                <div class="node-step">Step skipped</div>
+        </li>
+        <li test-id='21' class='node when skip' status='skip'>
+            <div class="step-name" title="approval.user_click_menu_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click menu approval</div>
+                <div class="node-step">Step skipped</div>
+        </li>
+        <li test-id='22' class='node when skip' status='skip'>
+            <div class="step-name" title="approvalBusinessCampaign.user_click_business_campaign()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user click business campaign</div>
+                <div class="node-step">Step skipped</div>
         </li>
         <li test-id='23' class='node when skip' status='skip'>
             <div class="step-name" title="approval.user_show_pending_approval()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user show pending approval</div>
@@ -384,17 +451,17 @@ Session ID: 529023908c7d25390f612a851102bb4f
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 30, 2021 03:54:16 PM</td>
+										<td>Dec 31, 2021 05:32:22 AM</td>
 										<td class='linked' test-id='1'>approvalBusinessCampaign feature</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 30, 2021 03:54:16 PM</td>
+										<td>Dec 31, 2021 05:32:22 AM</td>
 										<td class='linked' test-id='2'>approvalBusinessCampaign feature.Show approval marketing campaign and search account</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Dec 30, 2021 03:54:56 PM</td>
+										<td>Dec 31, 2021 05:32:41 AM</td>
 										<td class='linked' test-id='17'>approvalBusinessCampaign feature.Decide pending approval business campaign</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -427,7 +494,7 @@ Session ID: 529023908c7d25390f612a851102bb4f
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 30, 2021 03:54:16 PM</td>
+										<td>Dec 31, 2021 05:32:22 AM</td>
 										<td class='linked' test-id='2'>approvalBusinessCampaign feature.Show approval marketing campaign and search account</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -460,7 +527,7 @@ Session ID: 529023908c7d25390f612a851102bb4f
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 30, 2021 03:54:56 PM</td>
+										<td>Dec 31, 2021 05:32:41 AM</td>
 										<td class='linked' test-id='17'>approvalBusinessCampaign feature.Decide pending approval business campaign</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -498,8 +565,8 @@ Session ID: 529023908c7d25390f612a851102bb4f
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
 						<div class='exception-tests'>
@@ -513,36 +580,124 @@ Session ID: 529023908c7d25390f612a851102bb4f
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 30, 2021 03:54:25 PM</td>
-										<td class='linked' test-id='7'>approvalBusinessCampaign feature.Show approval marketing campaign and search account.When user click business campaign</td>
+										<td>Dec 31, 2021 05:32:39 AM</td>
+										<td class='linked' test-id='6'>approvalBusinessCampaign feature.Show approval marketing campaign and search account.When user click menu approval</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.xpath: //div[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//span[contains(text(),'Approval')]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MSI', ip: '192.168.203.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\IMAMSE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64750}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bf1dfc41634b8dc01bd2b8fbd73f1f73
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at stepsDef.approvalBusinessCampaign.user_click_business_campaign(approvalBusinessCampaign.java:30)
-	at ✽.user click business campaign(file:src/test/java/features/approvalBusinessCampaign.feature:10)
+System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepsDef.approval.user_click_menu_approval(approval.java:28)
+	at ✽.user click menu approval(file:src/test/java/features/approvalBusinessCampaign.feature:9)
 </textarea>
 										</td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.SessionNotCreatedException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Dec 30, 2021 03:55:03 PM</td>
-										<td class='linked' test-id='22'>approvalBusinessCampaign feature.Decide pending approval business campaign.When user click business campaign</td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 31, 2021 05:32:41 AM</td>
+										<td class='linked' test-id='18'>approvalBusinessCampaign feature.Decide pending approval business campaign.Given user is on homepage</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for at least one condition to be valid: visibility of element located by By.xpath: //div[@role='table'] (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=96.0.4664.110)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MSI', ip: '192.168.203.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\IMAMSE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64835}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 529023908c7d25390f612a851102bb4f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at stepsDef.approvalBusinessCampaign.user_click_business_campaign(approvalBusinessCampaign.java:30)
-	at ✽.user click business campaign(file:src/test/java/features/approvalBusinessCampaign.feature:27)
+System info: host: 'DESKTOP-0QRM3M5', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00EC6903+2517251]
+	Ordinal0 [0x00E5F8E1+2095329]
+	Ordinal0 [0x00D62848+1058888]
+	Ordinal0 [0x00D54FBF+1003455]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D5A82D+1026093]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D549F6+1001974]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D59ABC+1022652]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D549F6+1001974]
+	Ordinal0 [0x00D53F8D+999309]
+	Ordinal0 [0x00D54246+1000006]
+	Ordinal0 [0x00D53B35+998197]
+	Ordinal0 [0x00D4F6ED+980717]
+	Ordinal0 [0x00D53AF1+998129]
+	Ordinal0 [0x00D53890+997520]
+	Ordinal0 [0x00D53629+996905]
+	Ordinal0 [0x00D63A60+1063520]
+	Ordinal0 [0x00DABA7A+1358458]
+	Ordinal0 [0x00DAA71A+1353498]
+	Ordinal0 [0x00DA639B+1336219]
+	Ordinal0 [0x00D827A7+1189799]
+	Ordinal0 [0x00D83609+1193481]
+	GetHandleVerifier [0x01055904+1577972]
+	GetHandleVerifier [0x01100B97+2279047]
+	GetHandleVerifier [0x00F56D09+534521]
+	GetHandleVerifier [0x00F55DB9+530601]
+	Ordinal0 [0x00E64FF9+2117625]
+	Ordinal0 [0x00E698A8+2136232]
+	Ordinal0 [0x00E699E2+2136546]
+	Ordinal0 [0x00E73541+2176321]
+	BaseThreadInitThunk [0x76A2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77297A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77297A6E+238]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+	at stepsDef.LoginTest.user_is_on_homepage(LoginTest.java:30)
+	at ✽.user is on homepage(file:src/test/java/features/approvalBusinessCampaign.feature:23)
 </textarea>
 										</td>
 									</tr>
@@ -586,19 +741,19 @@ Session ID: 529023908c7d25390f612a851102bb4f
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 30, 2021 03:54:16 PM</div>
+					<div class='panel-lead'>Dec 31, 2021 05:32:21 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 30, 2021 03:55:34 PM</div>
+			 		<div class='panel-lead'>Dec 31, 2021 05:32:46 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 18s+543ms</div>
+					<div class='panel-lead'>0h 0m 25s+369ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -670,20 +825,20 @@ Session ID: 529023908c7d25390f612a851102bb4f
 				debugChild: 0,
 				exceptionsChild: 2,
 				grandChildCount: 24,
-				passGrandChild: 8,
+				passGrandChild: 3,
 				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 14,
+				skipGrandChild: 19,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 16,
+				exceptionsGrandChild: 21,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "approvalBusinessCampaign feature":78.233
+			        "approvalBusinessCampaign feature":24.383
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
